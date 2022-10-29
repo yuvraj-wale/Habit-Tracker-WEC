@@ -39,7 +39,7 @@ class SignUp extends StatelessWidget {
                           await _auth.createUserWithEmailAndPassword(
                               email: email, password: password);
                       if (newUser != null) {
-                          Navigator.pushNamed(context, 'home_page');
+                          Navigator.pushNamed(context, 'root_page');
                       }
                     } catch (e) {
                       print(e);
