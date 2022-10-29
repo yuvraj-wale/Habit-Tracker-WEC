@@ -1,28 +1,42 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_1/pages/home_page.dart';
+import 'package:flutter_application_1/pages/login_screen.dart';
 import 'package:flutter_application_1/pages/profile_page.dart';
+import 'package:flutter_application_1/pages/signup_screen.dart';
 import 'package:flutter_application_1/pages/stats_page.dart';
+import 'package:flutter_application_1/pages/welcome_screen.dart';
+import 'package:firebase_core/firebase_core.dart';
 
-void main() {
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp();
   runApp(const MyApp());
 }
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
+  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+
+      initialRoute: 'welcome_screen',
+      routes: {
+        'welcome_screen': (context) => const WelcomeScreen(),
+        'signup_screen': (context) => SignUp(),
+        'login_screen': (context) =>  LogIn(),
+        'home_page': (context) => const HomePage()
+      },
       theme: ThemeData(
         primarySwatch: Colors.green,
       ),
       debugShowCheckedModeBanner: false,
-      home: const RootPage(),
     );
   }
 }
 
-class RootPage extends StatefulWidget {
+/*class RootPage extends StatefulWidget {
   const RootPage({super.key});
 
   @override
@@ -66,5 +80,5 @@ class _RootPageState extends State<RootPage> {
       ),
     );
   }
-}
+}*/
 
