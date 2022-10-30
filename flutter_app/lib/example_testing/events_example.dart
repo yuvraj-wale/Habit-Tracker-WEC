@@ -1,16 +1,15 @@
+
 import 'package:flutter/material.dart';
 import 'package:table_calendar/table_calendar.dart';
-import '../example_testing/utils.dart';
 
+import 'utils.dart';
 
-class HomePage extends StatefulWidget {
-  const HomePage({super.key});
-
+class TableEventsExample extends StatefulWidget {
   @override
-  State<HomePage> createState() => _HomePageState();
+  _TableEventsExampleState createState() => _TableEventsExampleState();
 }
 
-class _HomePageState extends State<HomePage> {
+class _TableEventsExampleState extends State<TableEventsExample> {
   late final ValueNotifier<List<Event>> _selectedEvents;
   CalendarFormat _calendarFormat = CalendarFormat.month;
   RangeSelectionMode _rangeSelectionMode = RangeSelectionMode
@@ -84,6 +83,9 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        title: Text('TableCalendar - Events'),
+      ),
       body: Column(
         children: [
           TableCalendar<Event>(
