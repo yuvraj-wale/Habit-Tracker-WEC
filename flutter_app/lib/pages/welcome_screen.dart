@@ -20,16 +20,27 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
           mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children:[
+          Container(
+            padding: EdgeInsets.symmetric(
+              horizontal:8.0,
+              vertical: 20.0),
+            child: Center(child: Text(
+              'Welcome!',
+              style: TextStyle(
+                fontWeight: FontWeight.bold,
+                fontSize: 30,
+              ),
+              ))),
           ElevatedButton(
             onPressed:() => Navigator.pushNamed(context, 'login_screen'),
             style: ElevatedButton.styleFrom(
-              backgroundColor: Colors.lightBlueAccent
+              backgroundColor: Colors.black
             ),
             child: const Text('Log In')),
             ElevatedButton(
             onPressed:() =>  Navigator.pushNamed(context, 'signup_screen'),
             style: ElevatedButton.styleFrom(
-              backgroundColor: Colors.lightBlueAccent
+              backgroundColor: Colors.black
             ),
             child: const Text('Register'))
           ],

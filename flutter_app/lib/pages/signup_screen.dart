@@ -16,6 +16,7 @@ class SignUp extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.center,
             crossAxisAlignment: CrossAxisAlignment.stretch,
             children: [
+              Text('Email Address'),
               TextField(
                 keyboardType: TextInputType.emailAddress,
                 textAlign: TextAlign.center,
@@ -24,6 +25,7 @@ class SignUp extends StatelessWidget {
                 },
               ),
               const SizedBox(height: 8.0),
+              Text('Password'),
               TextField(
                 obscureText: true,
                 textAlign: TextAlign.center,
@@ -39,14 +41,14 @@ class SignUp extends StatelessWidget {
                           await _auth.createUserWithEmailAndPassword(
                               email: email, password: password);
                       if (newUser != null) {
-                          Navigator.pushNamed(context, 'root_page');
+                        Navigator.pushNamed(context, 'root_page');
                       }
                     } catch (e) {
                       print(e);
                     }
                   },
-                  style: ElevatedButton.styleFrom(
-                      backgroundColor: Colors.lightBlueAccent),
+                  style:
+                      ElevatedButton.styleFrom(backgroundColor: Colors.black),
                   child: const Text('Register'))
             ],
           ),

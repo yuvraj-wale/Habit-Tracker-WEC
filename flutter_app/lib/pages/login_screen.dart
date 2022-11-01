@@ -16,6 +16,7 @@ class LogIn extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.center,
             crossAxisAlignment: CrossAxisAlignment.stretch,
             children: [
+              Text('Email Address'),
               TextField(
                 keyboardType: TextInputType.emailAddress,
                 textAlign: TextAlign.center,
@@ -24,6 +25,7 @@ class LogIn extends StatelessWidget {
                 },
               ),
               const SizedBox(height: 8.0),
+              Text('Email Address'),
               TextField(
                 obscureText: true,
                 textAlign: TextAlign.center,
@@ -46,7 +48,7 @@ class LogIn extends StatelessWidget {
                     }
                   },
                   style: ElevatedButton.styleFrom(
-                      backgroundColor: Colors.lightBlueAccent),
+                      backgroundColor: Colors.black),
                   child: const Text('Log In'))
             ],
           ),
