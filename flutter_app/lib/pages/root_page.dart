@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_application_1/components/constants.dart';
 import 'package:flutter_application_1/pages/profile_page.dart';
 import 'package:flutter_application_1/pages/stats_page.dart';
 
@@ -22,7 +23,21 @@ class _RootPageState extends State<RootPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Habit Tracker'),
+        toolbarHeight: 100.0,
+        elevation: 0.0,
+        backgroundColor: Colors.white,
+        automaticallyImplyLeading: false,
+        title: Container(
+          width: 150.0,
+          height: 40.0,
+          child: Center(
+            child: Text('Habit tracker'),
+          ),
+          decoration: BoxDecoration(
+            color: Colors.black,
+            borderRadius: BorderRadius.circular(15)
+          ),
+          ),
       ),
       body: IndexedStack(
         index: currentpage,

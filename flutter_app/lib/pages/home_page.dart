@@ -106,19 +106,23 @@ class _HomePageState extends State<HomePage> {
         onPressed: (() {
           createNewHabit();
         }),
+        backgroundColor: Colors.black,
         child: const Icon(Icons.add),
       ),
-      backgroundColor: Colors.grey[300],
-      body: ListView.builder(
-        itemCount: db.todaysHabitList.length,
-        itemBuilder: (BuildContext context, int index) {
-          return HabitTile(
-              habitName: db.todaysHabitList[index][0],
-              habitCompleted: db.todaysHabitList[index][1],
-              onChanged: (value) => {checkboxTapped(value, index)},
-              settingsTapped: (context) => openHabitSettings(index),
-              deleteTapped: (context) => deleteHabit(index));
-        },
+      backgroundColor: Colors.white,
+      body: Padding(
+        padding: const EdgeInsets.symmetric(vertical: 20.0),
+        child: ListView.builder(
+          itemCount: db.todaysHabitList.length,
+          itemBuilder: (BuildContext context, int index) {
+            return HabitTile(
+                habitName: db.todaysHabitList[index][0],
+                habitCompleted: db.todaysHabitList[index][1],
+                onChanged: (value) => {checkboxTapped(value, index)},
+                settingsTapped: (context) => openHabitSettings(index),
+                deleteTapped: (context) => deleteHabit(index));
+          },
+        ),
       ),
     );
   }
