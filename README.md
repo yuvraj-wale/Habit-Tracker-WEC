@@ -3,7 +3,8 @@
 ## Setting Up
 - fork the repo
 - clone the repo in the desired directory
-- 
+- make sure you have already setted up flutter framework, if not follow the (docs)[https://docs.flutter.dev/get-started/install]
+- open the 
 
 ## List of implemented features :
 - implemented login and aign in using firebase aunthentication.
