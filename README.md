@@ -4,14 +4,17 @@
 - fork the repo
 - clone the repo in the desired directory
 - make sure you have already setted up flutter framework, if not follow the (docs)[https://docs.flutter.dev/get-started/install]
-- open the 
+- open the `flutter_app` folder from your directory using vscode or any code editor or cd into it
+- connect your mobile device or use a simulator
+- and in your terminal use `flutter run`
+- alternately you can directly downlaod the 
 
 ## List of implemented features :
-- implemented login and aign in using firebase aunthentication.
+- implemented login and sign in using `firebase aunthentication`.
 - added the habit-tracker page where users can add, edit and delete habits and even tick  the habits that are completed for the day.
-- added a heatmap which shows the data of completed habits based on how many were completed on a particular day thus showcasing basicaly a productivity chart.
+- added a `heatmap` which shows the data of completed habits based on how many were completed on a particular day thus showcasing basicaly a productivity chart.
 - also added a UI for the profile page which could be used in future for log out or accesing settings.
-- implemented hive database for storing data localy
+- implemented `hive` database for storing data localy
 
 ## List of non-implemented/planned features :
 - to complete the profile page and make it responive by adding logic and aldo features like logout options, settings options and even night mode.
@@ -36,5 +39,7 @@
 
 ## interest in UI/UX :
 - Currently dont have much experience with UI/UX but would love to explore since i do find it interesting.
+
+## screenshots and recording of the app
 
 
