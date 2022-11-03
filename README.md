@@ -3,11 +3,12 @@
 ## Setting Up
 - fork the repo
 - clone the repo in the desired directory
-- make sure you have already setted up flutter framework, if not follow the (docs)[https://docs.flutter.dev/get-started/install]
+- make sure you have already setted up flutter framework, if not follow the [https://docs.flutter.dev/get-started/install]
 - open the `flutter_app` folder from your directory using vscode or any code editor or cd into it
 - connect your mobile device or use a simulator
 - and in your terminal use `flutter run`
-- alternately you can directly downlaod the 
+- alternately you can directly downlaod the `app-release_apk`.
+- and enjoy :)
 
 ## List of implemented features :
 - implemented login and sign in using `firebase aunthentication`.
@@ -41,5 +42,4 @@
 - Currently dont have much experience with UI/UX but would love to explore since i do find it interesting.
 
 ## screenshots and recording of the app
-
-
+- [https://drive.google.com/drive/folders/1Qh-NsNSdvnjyUsTBusyfEWRWSN_b-eiy?usp=share_link]
