@@ -34,6 +34,7 @@ class MyApp extends StatelessWidget {
         'root_page': (context) => const RootPage()
       },
       theme: ThemeData(
+        fontFamily: 'Poppins',
         primarySwatch: Colors.green,
       ),
       debugShowCheckedModeBanner: false,

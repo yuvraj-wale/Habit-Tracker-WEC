@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_slidable/flutter_slidable.dart';
+import 'package:syncfusion_flutter_charts/charts.dart';
 
 class HabitTile extends StatelessWidget {
   final String habitName;
   final bool habitCompleted;
-
   final Function(bool?)? onChanged;
   final Function(BuildContext)? settingsTapped;
   final Function(BuildContext)? deleteTapped;
@@ -22,7 +22,7 @@ class HabitTile extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.symmetric(
         horizontal: 16.0,
-        vertical: 16.0),
+        vertical: 13.0),
       child: Slidable(
         endActionPane: ActionPane(motion: StretchMotion(), children: [
           SlidableAction(
@@ -41,7 +41,7 @@ class HabitTile extends StatelessWidget {
         child: Container(
           padding: EdgeInsets.symmetric(
             horizontal: 24.0,
-            vertical: 10.0
+            vertical: 15.0
             ),
           decoration: BoxDecoration(
               color: Colors.grey.shade300,
@@ -49,7 +49,11 @@ class HabitTile extends StatelessWidget {
           child: Row(
             children: [
               Checkbox(value: habitCompleted, onChanged: onChanged),
-              Text(habitName),
+              Text(
+                habitName,
+                style: TextStyle(
+                  fontSize: 15
+                ),),
             ],
           ),
         ),
